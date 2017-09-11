@@ -24,14 +24,12 @@ void printList(Node* head) {//{{{
 }/*}}}*/
 
 
-void insertAtEnd(Node** head, int x) {
+void insertAtEnd(Node** head, int x) {//{{{
+    Node* temp = new Node();
+    temp -> data = x;
     if(*head == NULL) {
-        Node* temp = new Node();
-        temp -> data = x;
         *head = temp;
     } else {
-        Node* temp = new Node();
-        temp -> data = x;
         Node* temp1 = new Node();
         temp1 = *head;
         while(temp1 -> link != NULL) {
@@ -39,7 +37,7 @@ void insertAtEnd(Node** head, int x) {
         }
         temp1 -> link = temp;
     }
-}
+}/*}}}*/
 
 void insertAtBeginning(Node** head, int x) {
     Node* temp = new Node();
